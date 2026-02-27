@@ -8,11 +8,12 @@
     <meta name="keywords" content="знамиња, химни, дипломатија, протокол, партитури, флагови, антеми, world flags, national anthems, diplomatic protocol">
     <meta name="author" content="World Protocol 9">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://worldprotocol9.github.io/worldprotocol9">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="WORLD PROTOCOL 9 | Глобална Енциклопедија">
     <meta property="og:description" content="197 земји · Знамиња · Химни · Партитури · Дипломатски Протокол">
-    <meta property="og:url" content="https://worldprotocol9.com">
+    <meta property="og:url" content="https://worldprotocol9.github.io/worldprotocol9">
     <meta property="og:image" content="https://flagcdn.com/w640/mk.png">
     <meta property="og:locale" content="mk_MK">
     <!-- Twitter Card -->
@@ -27,6 +28,27 @@
     <meta name="apple-mobile-web-app-title" content="World Protocol 9">
     <link rel="apple-touch-icon" href="https://flagcdn.com/w80/mk.png">
     <title>WORLD PROTOCOL 9 | ULTIMATE EDITION 🌍</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "World Protocol 9",
+      "description": "Глобална енциклопедија на знамиња, химни и дипломатски протокол — 197 земји",
+      "url": "https://worldprotocol9.github.io/worldprotocol9",
+      "applicationCategory": "Education",
+      "inLanguage": ["mk", "en"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0.99",
+        "priceCurrency": "USD"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "flagsandanthems9@gmail.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@200;300;400;600;800;900&display=swap" rel="stylesheet">
 
@@ -811,7 +833,7 @@ header {
 }
 
 .modal-flag-container::after {
-    content: '© WORLD PROTOCOL 9 · worldprotocol9.com';
+    content: '© WORLD PROTOCOL 9';
     position: absolute;
     bottom: 8px;
     right: 10px;
@@ -1738,7 +1760,7 @@ document.addEventListener('keydown', function(e) {
 <div class="cotd-bar" id="cotdBar" onclick="openCOTD()">
     <span class="cotd-label">✦ ЗЕМЈА НА ДЕНОТ ✦</span>
     <img class="cotd-flag flag-protected" id="cotdFlag" src="" alt="">
-    <span class="cotd-name" id="cotdName">...</span>
+    <span class="cotd-name" id="cotdName">Вчитување...</span>
     <span class="cotd-cap" id="cotdCap">🏛️ ...</span>
     <span style="font-size:0.65rem;color:var(--text2);font-family:'Share Tech Mono',monospace;" id="liveClock"></span>
 </div>
@@ -1776,7 +1798,7 @@ document.addEventListener('keydown', function(e) {
 
 <!-- MAIN GRID -->
 <div class="main-grid" id="mainGrid"></div>
-<div class="no-results" id="noResults">Нема резултати за „<span id="noResultsQuery"></span>"</div>
+<div class="no-results" id="noResults" style="display:none;">Нема резултати за „<span id="noResultsQuery"></span>"</div>
 
 
 <!-- PAYMENT SECTION -->
@@ -3248,7 +3270,7 @@ async function processPayment(e) {
     const planLabel = currentPlan || 'World Protocol 9';
 
     if (method === 'paypal') {
-        const url = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ssmiljanov%40gmail.com&amount=${price}&currency_code=USD&item_name=${encodeURIComponent('World Protocol 9 - ' + planLabel)}&return=https%3A%2F%2Fworldprotocol9.com%2Fsuccess&cancel_return=https%3A%2F%2Fworldprotocol9.com`;
+        const url = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ssmiljanov%40gmail.com&amount=${price}&currency_code=USD&item_name=${encodeURIComponent('World Protocol 9 - ' + planLabel)}&return=https%3A%2F%2Fworldprotocol9.github.io--worldprotocol9--success&cancel_return=https://worldprotocol9.github.io/worldprotocol9`;
         showToast('🔄 Пренасочување кон PayPal...', '#0088CC');
         setTimeout(() => window.open(url, '_blank'), 700);
     } else if (method === 'stripe') {
@@ -3316,7 +3338,7 @@ function shareCountry(id, platform) {
     const c = worldData.find(x => x.id === id);
     const lat = toLatin(c.n);
     const text = `🌍 ${c.n} (${lat}) — ${c.cap} | World Protocol 9 | #WorldProtocol9 #${toLatin(c.continent).replace(/\s/g,'')}`;
-    const url = `https://worldprotocol9.com/country/${id}`;
+    const url = `https://worldprotocol9.github.io/worldprotocol9?country=${id}`;
     const urls = {
         twitter:   `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
         facebook:  `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`,
