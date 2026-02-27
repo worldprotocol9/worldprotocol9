@@ -1945,17 +1945,17 @@ document.addEventListener('keydown', function(e) {
 <footer>
     <div class="footer-logo">✦ WORLD PROTOCOL 9 ✦</div>
     <div class="footer-emails">
-        <a href="/cdn-cgi/l/email-protection#3f59535e584c5e515b5e514b575a524c067f58525e5653115c5052">📧 <span class="__cf_email__" data-cfemail="086e64696f7b69666c69667c606d657b31486f65696164266b6765">[email&#160;protected]</span></a>
-        <a href="/cdn-cgi/l/email-protection#077068756b63777568736864686b3e47606a666e6b2964686a">📧 <span class="__cf_email__" data-cfemail="2c5b435e40485c5e4358434f4340156c4b414d4540024f4341">[email&#160;protected]</span></a>
+        <a href="mailto:flagsandanthems9@gmail.com">📧 flagsandanthems9@gmail.com</a>
+        <a href="mailto:worldprotocol9@gmail.com">📧 worldprotocol9@gmail.com</a>
     </div>
-    <div class="footer-copy">© 2026 WORLD PROTOCOL 9  ·  flagsandanthems9@gmail.com  ·  flagsandanthems9@gmail.com  ·  ALL RIGHTS RESERVED</div>
+    <div class="footer-copy">© 2026 WORLD PROTOCOL 9  ·  flagsandanthems9@gmail.com  ·  worldprotocol9@gmail.com  ·  ALL RIGHTS RESERVED</div>
 </footer>
 
 <!-- GDPR COOKIE BANNER -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;background:var(--bg3);border-top:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;backdrop-filter:blur(12px);">
     <div style="font-size:0.78rem;color:var(--text2);max-width:600px;">
         🍪 Оваа платформа користи колачиња (cookies) за зачувување на твоите поставки и куповини. 
-        <a href="https://worldprotocol9.com/privacy" target="_blank" style="color:var(--gold);text-decoration:none;">Политика на приватност</a>
+        <a href="https://worldprotocol9.github.io/worldprotocol9/#privacy" target="_blank" style="color:var(--gold);text-decoration:none;">Политика на приватност</a>
     </div>
     <div style="display:flex;gap:8px;">
         <button onclick="acceptCookies()" class="btn btn-gold btn-sm">✓ Прифати</button>
@@ -3264,7 +3264,7 @@ async function processPayment(e) {
         showToast('🔄 Пренасочување кон Stripe...', '#635bff');
         setTimeout(() => window.open(link, '_blank'), 700);
     } else if (method === 'crypto') {
-        alert(`₿ КРИПТО ПЛАЌАЊЕ\n\nИзнос: $${price} USD\n\nBTC: [твоја адреса]\nETH: [твоја адреса]\nUSDT (TRC20): [твоја адреса]\n\nВо напомена: ${planLabel} — ${email}\n\nПотврда на: flagsandanthems9@gmail.com`);
+        alert(`₿ КРИПТО ПЛАЌАЊЕ\n\nИзнос: $${price} USD\n\nBTC: [твоја адреса]\nETH: [твоја адреса]\nUSDT (TRC20): [твоја адреса]\n\nВо напомена: ${planLabel} — ${email}\n\nПотврда на: flagsandanthems9@gmail.com / worldprotocol9@gmail.com`);
         showToast('₿ Испрати потврда на email!', '#f7931a');
     } else if (method === 'bank') {
         alert(`🏦 БАНКАРСКИ ТРАНСФЕР\n\nПрималец: Sande Smiljanovski\nБанка: НЛБ Банка Македонија\nСметка: MK07 2107 XXXX XXXX XX\nСВИФТ: TUBBMK22\n\nИзнос: $${price} / ${(price*61.5).toFixed(0)} МКД\nЦел: WP9 — ${planLabel}\n\nКонтакт: ssmiljanov@gmail.com`);
